@@ -1,0 +1,90 @@
+/* COMMON */
+body {
+  font-size: 16px;
+  font-weight: 400;
+  color : #333;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.4;
+}
+
+img {
+  display: block;
+}
+
+.inner {
+  width : 1200px;
+  margin : 0 auto;
+  position : relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* HEADER */
+
+header {
+  width : 100%;
+}
+
+header .inner {
+  height: 120px;
+}
+
+header .inner img {
+  height: 41px;
+  position: absolute;
+  top : 0;
+  bottom : 0;
+  margin : auto;
+}
+
+header .inner ul {
+  display: flex;
+  position : absolute;
+  right : 0;
+  bottom : 0;
+  margin-bottom : 40px;
+  width: 410px;
+}
+
+header .inner ul li {
+  flex-grow: 1;
+  flex-basis: 0;
+  text-align: center;
+}
+
+header .inner ul li a {
+  display: block;
+  padding : 15px 0;
+  color : #333;
+  font-weight: 700;
+}
+
+header .inner ul .underline {
+  width : 25%;
+  height: 2px;
+  background-color: #222;
+  position : absolute;
+  bottom: 0;
+  left: 0;
+  transition : .5s ease-in-out;
+}
+
+
+header .inner ul li:nth-child(2):hover ~ .underline {
+  left : 25%;
+}
+
+header .inner ul li:nth-child(3):hover ~ .underline {
+  left : 50%;
+}
+
+header .inner ul li:nth-child(4):hover ~ .underline {
+  left : 75%;
+}
+
