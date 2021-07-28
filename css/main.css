@@ -95,13 +95,14 @@ header .inner ul li:nth-child(4):hover ~ .underline {
 }
 
 .banner .inner {
-  background-image: url('../image/Banner.png');
   height: 550px;
-  background-repeat: no-repeat;
-  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.banner .inner img {
+  height: 100%;
 }
 
 .banner .inner h1 {
@@ -153,7 +154,7 @@ header .inner ul li:nth-child(4):hover ~ .underline {
   font-size: 40px;
 }
 
-.articles .text-box .btn {
+.articles .text-box .more {
   font-size: 20px;
   cursor: pointer;
 }
@@ -189,6 +190,49 @@ header .inner ul li:nth-child(4):hover ~ .underline {
 .articles .article_2 .img-box {
   left : 0;
 }
+
+/* NEWSLETTER */
+.news-letter {
+  margin-top: 105px;
+}
+
+.news-letter .inner {
+  height: 260px;
+  background-image: url('../image/newsletter.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+.news-letter .inner .text-box {
+  filter: drop-shadow(4px 4px 10px rgba(0,0,0,.5));
+  position: relative;
+}
+
+.news-letter .inner .text-box h1 {
+  font-size: 50px;
+  color: #fff;
+
+}
+.news-letter .inner .text-box .btn {
+  width: 135px;
+  height: 30px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin:20px auto 0;
+}
+
+
 
 
 
