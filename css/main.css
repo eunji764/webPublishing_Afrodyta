@@ -232,8 +232,43 @@ header .inner ul li:nth-child(4):hover ~ .underline {
   margin:20px auto 0;
 }
 
+/* INFORMATION */
 
+.info {
+  text-align: center;
+  margin-bottom: 40px;
+}
 
+.info ul {
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+  margin-bottom: 50px;
+}
 
+.info ul li {
+  position: relative;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 10px 16px;
+}
+ 
+.info ul li::before {
+  content: "";
+  width: 6px;
+  height: 2px;
+  background-color: #333;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto -20px;
+}
 
+.info ul li:first-child::before {
+  display: none;
+}
+
+.info span {
+  line-height: 2;
+}
 
