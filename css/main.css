@@ -2,9 +2,8 @@
 body {
   font-size: 16px;
   font-weight: 400;
-  color : #333;
+  color : #222;
   font-family: 'Open Sans', sans-serif;
-  line-height: 1.4;
 }
 
 img {
@@ -12,7 +11,7 @@ img {
 }
 
 .inner {
-  max-width : 1200px;
+  max-width : 1140px;
   margin : 0 auto;
   position : relative;
 }
@@ -41,6 +40,7 @@ header .inner img {
   top : 0;
   bottom : 0;
   margin : auto;
+  left: 0;
 }
 
 header .inner ul {
@@ -122,3 +122,74 @@ header .inner ul li:nth-child(4):hover ~ .underline {
   transform : rotate(-90deg);
   color : #999;
 }
+
+/* ARTICLE */
+.articles .inner .article {
+  display: flex;
+  margin-top: 105px;
+  position: relative;
+}
+
+.articles .inner .article_2 {
+  justify-content: flex-end;
+}
+
+.articles .text-box,
+.articles .img-box  {
+  font-weight: 800;
+  width: 540px;
+}
+
+.articles .text-box h1 {
+  font-size: 80px;
+}
+
+.articles .text-box h2 {
+  font-size: 60px;
+  margin-bottom: 45px;
+}
+
+.articles .text-box h3 {
+  font-size: 40px;
+}
+
+.articles .text-box .btn {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.articles .text-box p {
+  font-weight: 400;
+  font-size: 15px;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.article_3 .text-box h1 {
+  padding-top: 347px;
+}
+
+.articles .inner .article .img-box {
+  position : absolute;
+  top: 0;
+  margin-top: -34px;
+}
+
+.articles .inner .article .img-box .img-data {
+  font-weight: 800;
+  font-size: 25px;
+}
+
+.articles .article_1 .img-box,
+.articles .article_3 .img-box {
+  right : 0; 
+  text-align: right;
+}
+
+.articles .article_2 .img-box {
+  left : 0;
+}
+
+
+
+
