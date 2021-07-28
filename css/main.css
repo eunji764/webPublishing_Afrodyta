@@ -236,7 +236,7 @@ header .inner ul li:nth-child(4):hover ~ .underline {
 
 .info {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 
 .info ul {
@@ -271,4 +271,41 @@ header .inner ul li:nth-child(4):hover ~ .underline {
 .info span {
   line-height: 2;
 }
+
+/* CATEGORY */
+.category {
+  margin-bottom: 105px;
+}
+
+.category .inner {
+  display: flex;
+}
+.category .img-box {
+  margin-left: 30px;
+  position: relative;
+}
+
+.category .img-box:last-child {
+  margin-left: 0;
+}
+
+.category .img-box img {
+  width: 360px;
+}
+.category .img-box h1 {
+  position: absolute;
+  display: block;
+  font-size: 80px;
+  font-weight: 800;
+  width: 200px;
+  text-align: center;
+  right: 0;
+  left: 0;
+  top: 50%;
+  margin: -40px auto 0; 
+  color: #fff;
+  filter: drop-shadow(4px 4px 10px rgba(0,0,0,.5))
+}
+
+
 
