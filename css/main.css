@@ -12,7 +12,7 @@ img {
 }
 
 .inner {
-  width : 1200px;
+  max-width : 1200px;
   margin : 0 auto;
   position : relative;
 }
@@ -75,7 +75,6 @@ header .inner ul .underline {
   transition : .5s ease-in-out;
 }
 
-
 header .inner ul li:nth-child(2):hover ~ .underline {
   left : 25%;
 }
@@ -88,3 +87,38 @@ header .inner ul li:nth-child(4):hover ~ .underline {
   left : 75%;
 }
 
+
+/* BANNER */
+
+.banner {
+  width : 100%;
+}
+
+.banner .inner {
+  background-image: url('../image/Banner.png');
+  height: 550px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner .inner h1 {
+  position : absolute;
+  font-size: 80px;
+  font-weight: 800;
+  color : #fff;
+  text-align: center;
+  filter: drop-shadow(4px 4px 10px rgba(0,0,0,.5));
+}
+
+.banner .copyright {
+  position: fixed;
+  top : 550px;
+  left: 50%;
+  margin-left: -730px;
+  font-size: 16px;
+  transform : rotate(-90deg);
+  color : #999;
+}
