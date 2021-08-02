@@ -11,7 +11,7 @@ img {
 }
 
 .inner {
-  max-width : 1140px;
+  width : 1140px;
   margin : 0 auto;
   position : relative;
 }
@@ -28,6 +28,14 @@ li {
   background-color: #f6f6f6;
   z-index: -1;
   position: absolute;
+}
+
+.more {
+  cursor: pointer;
+}
+
+.more:hover {
+  color: #555;
 }
 
 /* HEADER */
@@ -131,6 +139,10 @@ header .inner ul li:nth-child(4):hover ~ .underline {
 }
 
 /* ARTICLE */
+.articles {
+  position: relative;
+}
+
 .inner .article {
   display: flex;
   margin-top: 105px;
@@ -162,7 +174,6 @@ header .inner ul li:nth-child(4):hover ~ .underline {
 
 .articles .text-box .more {
   font-size: 20px;
-  cursor: pointer;
 }
 
 .article .text-box p {
@@ -184,7 +195,7 @@ header .inner ul li:nth-child(4):hover ~ .underline {
 .articles .inner .article .img-box {
   position : absolute;
   top: 0;
-  margin-top: -34px;
+  margin-top: -27px;
 }
 
 .articles .inner .article .img-box .img-data {
@@ -201,6 +212,63 @@ header .inner ul li:nth-child(4):hover ~ .underline {
 .articles .article_2 .img-box {
   left : 0;
 }
+
+.articles .article_1 .bar-box {
+  position: absolute;
+  top : 70px;
+  left: 429px;
+  z-index: 1;
+}
+
+.articles .article_1 .bar-box .bar-container {
+  background-color: #fff;
+  height: 6px;
+  position: relative;
+  margin-top: 40px;
+}
+
+.articles .article_1 .bar-box .bar-container .child {
+  right : 134px;
+  background-color: #333;
+  width: 171px;
+  height: 100%;
+}
+
+.articles .article_1 .bar-box .bar-container1 { 
+  width: 300px;
+}
+.articles .article_1 .bar-box .bar-container2 { 
+  width: 335px;
+}
+
+.articles .article_1 .bar-box .bar-container3 { 
+  width: 320px;
+}
+
+.articles .article_1 .bar-box .bar-container2 .child {
+  width: 125px;
+  margin-left: 46px;
+}
+.articles .article_1 .bar-box .bar-container3 .child {
+  width : 155px;
+  margin-left: 16px;
+}
+
+.articles .article_2 .back {
+  width: 990px;
+  height: 150px;
+  top: 70px;
+  left: 100px;
+}
+
+.articles .article_3 .back {
+  width: 500px;
+  height: 200px;
+  transform : rotate(60deg);
+  top : 145px;
+  left: -40px;
+}
+
 
 /* NEWSLETTER */
 .news-letter {
@@ -225,8 +293,8 @@ header .inner ul li:nth-child(4):hover ~ .underline {
 .news-letter .inner .text-box h1 {
   font-size: 50px;
   color: #fff;
-
 }
+
 .news-letter .inner .text-box .btn {
   width: 135px;
   height: 30px;
@@ -241,6 +309,13 @@ header .inner ul li:nth-child(4):hover ~ .underline {
   right: 0;
   left: 0;
   margin:20px auto 0;
+  cursor: pointer;
+}
+
+.news-letter .inner .text-box .btn:hover {
+  color: #fff;
+  background-color: #999;
+
 }
 
 /* INFORMATION */
@@ -291,9 +366,11 @@ header .inner ul li:nth-child(4):hover ~ .underline {
 .category .inner {
   display: flex;
 }
+
 .category .img-box {
   margin-left: 30px;
   position: relative;
+  background-color: #f6f6f6;
 }
 
 .category .img-box:first-child {
@@ -302,6 +379,7 @@ header .inner ul li:nth-child(4):hover ~ .underline {
 
 .category .img-box img {
   width: 360px;
+  transition : transform .5s;
 }
 .category .img-box h1 {
   position: absolute;
@@ -315,24 +393,28 @@ header .inner ul li:nth-child(4):hover ~ .underline {
   top: 50%;
   margin: -40px auto 0; 
   color: #fff;
-  filter: drop-shadow(4px 4px 10px rgba(0,0,0,.5))
+  filter: drop-shadow(4px 4px 10px rgba(0,0,0,.5));
+  z-index: 3;
 }
 
+.category .img-box h1:hover {
+  cursor: pointer;
+  font-size: 90px;
+  transform: translate( -20px, -20px);
+}
+
+.category .img-box h1:hover ~ img {
+  transform: translate( -20px, -20px);
+  opacity: .8;
+}
 
 /* ARTICLE2 */
-.article-2 {
-
-}
 
 .article-2 .inner {
   height: 590px;
 }
 .article-2 .inner .article {
   justify-content: flex-end;
-
-}
-
-.article-2 .inner .article .text-box {
 
 }
 
@@ -352,6 +434,10 @@ header .inner ul li:nth-child(4):hover ~ .underline {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.article-2 .inner .more {
+  cursor: pointer;
 }
 
 .article-2 .inner .back {
@@ -414,11 +500,11 @@ footer .icon {
   width : 300px;
 }
 
-footer .icon img {
+footer .icon a {
   margin-right: 20px ;
 }
 
-footer .icon img:last-child {
+footer .icon a:last-child {
   margin-right: 0;
 }
 
