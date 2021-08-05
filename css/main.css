@@ -1,6 +1,7 @@
+
 /* COMMON */
 body {
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 400;
   color : #222;
   font-family: 'Open Sans', sans-serif;
@@ -11,7 +12,7 @@ img {
 }
 
 .inner {
-  width : 1140px;
+  max-width : 1140px;
   margin : 0 auto;
   position : relative;
 }
@@ -32,6 +33,7 @@ li {
 
 .more {
   cursor: pointer;
+  padding : 5px 10px;
 }
 
 .more:hover {
@@ -46,24 +48,24 @@ header {
 
 header .inner {
   height: 120px;
+  display: flex;
+  justify-content: space-between;
 }
 
 header .inner img {
   height: 41px;
-  position: absolute;
-  top : 0;
-  bottom : 0;
-  margin : auto;
-  left: 0;
+  width: 183px;
+  margin: auto 0;
+  padding: 20px 10px;
 }
 
 header .inner ul {
   display: flex;
-  position : absolute;
-  right : 0;
-  bottom : 0;
-  margin-bottom : 40px;
+  position : relative;
+  margin: auto 0;
   width: 410px;
+  transition: .8s;
+  z-index: 9;
 }
 
 header .inner ul li {
@@ -101,6 +103,15 @@ header .inner ul li:nth-child(4):hover ~ .underline {
   left : 75%;
 }
 
+header .material-icons {
+  display: none;
+  position: absolute;
+  height: 40px;
+  top: 25px;
+  right: 10px;
+  font-size: 2.5em;
+  cursor: pointer;
+}
 
 /* BANNER */
 
@@ -121,7 +132,7 @@ header .inner ul li:nth-child(4):hover ~ .underline {
 
 .banner .inner h1 {
   position : absolute;
-  font-size: 80px;
+  font-size: 5rem;
   font-weight: 800;
   color : #fff;
   text-align: center;
@@ -145,12 +156,15 @@ header .inner ul li:nth-child(4):hover ~ .underline {
 
 .inner .article {
   display: flex;
+  justify-content: space-between;
   margin-top: 105px;
   position: relative;
 }
 
-.articles .inner .article_2 {
-  justify-content: flex-end;
+.inner .article_3 {
+  height: 240px;
+  align-items: flex-end;
+  margin-top: 160px;
 }
 
 .article .text-box,
@@ -183,18 +197,12 @@ header .inner ul li:nth-child(4):hover ~ .underline {
   line-height: 1.6;
 }
 
-.article_3 .text-box h1 {
-  padding-top: 347px;
-}
-
 .article_2 h2,
 .article_2 h3 {
   text-align: right;
 }
 
 .articles .inner .article .img-box {
-  position : absolute;
-  top: 0;
   margin-top: -27px;
 }
 
@@ -205,54 +213,66 @@ header .inner ul li:nth-child(4):hover ~ .underline {
 
 .articles .article_1 .img-box,
 .articles .article_3 .img-box {
-  right : 0; 
   text-align: right;
 }
 
 .articles .article_2 .img-box {
-  left : 0;
+  order: -1;
 }
 
 .articles .article_1 .bar-box {
   position: absolute;
   top : 70px;
-  left: 429px;
+  right: 540px;
   z-index: 1;
 }
 
 .articles .article_1 .bar-box .bar-container {
-  background-color: #fff;
   height: 6px;
   position: relative;
   margin-top: 40px;
 }
 
 .articles .article_1 .bar-box .bar-container .child {
-  right : 134px;
-  background-color: #333;
-  width: 171px;
+  position : absolute;
   height: 100%;
 }
 
-.articles .article_1 .bar-box .bar-container1 { 
-  width: 300px;
-}
-.articles .article_1 .bar-box .bar-container2 { 
-  width: 335px;
+.articles .article_1 .black {
+  width : 171px;
 }
 
-.articles .article_1 .bar-box .bar-container3 { 
-  width: 320px;
+.articles .article_1 .white {
+  width : 164px;
+  margin-right: -164px;
 }
 
-.articles .article_1 .bar-box .bar-container2 .child {
+.articles .article_1 .bar-box.black .bar-container .child {
+  background-color: #333;
+  right: 0;
+  width: 171px;
+}
+.articles .article_1 .bar-box.black .bar-container2 .child {
   width: 125px;
-  margin-left: 46px;
 }
-.articles .article_1 .bar-box .bar-container3 .child {
+.articles .article_1 .bar-box.black .bar-container3 .child {
   width : 155px;
-  margin-left: 16px;
 }
+
+.articles .article_1 .bar-box.white .bar-container .child {
+  background-color: #fff;
+  left: 0;
+  width: 164px;
+}
+
+.articles .article_1 .bar-box.white .bar-container1 .child { 
+  width: 129px;
+}
+
+.articles .article_1 .bar-box.white .bar-container3 .child { 
+  width: 149px;
+}
+
 
 .articles .article_2 .back {
   width: 990px;
@@ -265,7 +285,7 @@ header .inner ul li:nth-child(4):hover ~ .underline {
   width: 500px;
   height: 200px;
   transform : rotate(60deg);
-  top : 145px;
+  top : -140px;
   left: -40px;
 }
 
@@ -293,6 +313,7 @@ header .inner ul li:nth-child(4):hover ~ .underline {
 .news-letter .inner .text-box h1 {
   font-size: 50px;
   color: #fff;
+  text-align: center;
 }
 
 .news-letter .inner .text-box .btn {
@@ -310,6 +331,7 @@ header .inner ul li:nth-child(4):hover ~ .underline {
   left: 0;
   margin:20px auto 0;
   cursor: pointer;
+  transition: background-color .4s;
 }
 
 .news-letter .inner .text-box .btn:hover {
@@ -368,7 +390,8 @@ header .inner ul li:nth-child(4):hover ~ .underline {
 }
 
 .category .img-box {
-  margin-left: 30px;
+  width : 31.5%;
+  margin-left: 2.75%;
   position: relative;
   background-color: #f6f6f6;
 }
@@ -378,13 +401,13 @@ header .inner ul li:nth-child(4):hover ~ .underline {
 }
 
 .category .img-box img {
-  width: 360px;
+  width : 100%;
   transition : transform .5s;
 }
 .category .img-box h1 {
   position: absolute;
   display: block;
-  font-size: 80px;
+  font-size: 5rem;
   font-weight: 800;
   width: 200px;
   text-align: center;
@@ -397,50 +420,36 @@ header .inner ul li:nth-child(4):hover ~ .underline {
   z-index: 3;
 }
 
-.category .img-box h1:hover {
+.category .img-box:hover {
   cursor: pointer;
-  font-size: 90px;
   transform: translate( -20px, -20px);
 }
 
-.category .img-box h1:hover ~ img {
-  transform: translate( -20px, -20px);
+.category .img-box:hover img {
   opacity: .8;
 }
 
+
 /* ARTICLE2 */
 
-.article-2 .inner {
-  height: 590px;
-}
-.article-2 .inner .article {
-  justify-content: flex-end;
 
-}
-
-.article-2 .inner .article .text-box h2, 
-.article-2 .inner .article .text-box h3 {
+ .article_4 .text-box h2, 
+ .article_4 .text-box h3 {
   text-align: right;
 }
 
-.article-2 .inner .article .text-box h3 {
+.article_4 .text-box h3 {
   margin-bottom: 20px;
 }
 
-.article-2 .inner .article .text-box p {
+.article_4 .text-box p {
   margin-top: 50px;
 }
-.article-2 .inner .article img {
-  position: absolute;
-  top: 0;
-  left: 0;
+.inner .article_4 .img-box {
+  order: -1;
 }
 
-.article-2 .inner .more {
-  cursor: pointer;
-}
-
-.article-2 .inner .back {
+.articles_2 .inner .back {
   width: 990px;
   height: 440px;
   top : 50px;
@@ -510,5 +519,123 @@ footer .icon a:last-child {
 
 
 
+
+/* MEDIAQUERY */
+@media screen and (max-width:1090px) {
+  .articles .inner .article  {
+    flex-direction: column;
+  } 
+
+  .articles .inner .article .text-box,
+  .articles .inner .article .img-box  {
+    margin : 0 auto 30px;
+    width: 80%;
+  }
+
+  .articles .inner .article .img-box {
+    position: static;
+  }
+
+  .inner .article_3 {
+    margin-top: 105px;
+  }
+
+  .articles .inner .article_2 .img-box, 
+  .articles .inner .article_4 .img-box {
+    order : 0;
+  }
+
+  .articles .inner .article img {
+    width: 100%;
+  }
+
+
+  .articles .inner .article_3 {
+    height: auto;
+  }
+
+  .articles .article_2 .img-box {
+    text-align: right;
+  }
+  
+  .more {
+    border: 1px solid #6e6e6e;
+    border-radius: 20px;
+  }
+  
+  .more:hover {
+    background-color :#e4e4e4;
+    color: #222;
+  }
+
+  .articles .article_1 .bar-box {
+    width: 80%;
+    margin : 0 10%;
+  }
+
+  .articles .article_1 .bar-box.black {
+    right: 0;
+  }
+
+  .articles .article_1 .bar-box.white {
+    left: 0;
+    top: 440px;
+  }
+} 
+
+
+@media screen and (max-width:1024px) {
+  header .inner {
+    flex-direction: column;
+    align-items: center;
+    height: 90px;
+  }
+
+  header .inner ul {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 90px;
+    background-color: #fff;
+  }
+
+  header .inner ul li:first-child{
+    border-top: 1px solid #f9f9f9;
+  }
+
+  header .inner ul li{
+    border-bottom: 1px solid #f9f9f9;
+  } 
+
+  header .inner ul li:hover{
+    background-color: #f9f9f9;
+  } 
+
+  header .inner .material-icons {
+    display: block;
+  }
+
+  header .inner ul .underline {
+    display : none;
+  }
+
+  .category .img-box:hover {
+    transform: none;
+  }
+
+}
+
+
+@media screen and (max-width:768px) {
+  .articles .article_1 .bar-box {
+    display: none;
+  }
+
+  .category .img-box h1 {
+    font-size: 3em;
+  }
+  
+}
 
 
